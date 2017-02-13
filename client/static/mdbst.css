@@ -1,0 +1,258 @@
+/* Makeshift CSS Reset */  
+{  
+    margin: 0;  
+    padding: 0;  
+}  
+  
+/*general*/ 
+div#sidebar, div.message {  
+    display: block;  
+}  
+  
+body {  
+    margin: 0 auto;  
+    width: 940px;  
+    font: 13px/22px Helvetica, Arial, sans-serif;  
+    background: #f0f0f0;  
+}  
+
+h1 {
+	color: #FFCC00;
+	font-size: 30px;
+}
+h2 {  
+    font-size: 28px;  
+    line-height: 44px;  
+    padding: 22px 0;  
+}  
+  
+h3 {  
+    font-size: 22px;  
+}
+button {
+  margin-top: 1em;
+  width: 10em;
+  height: 2em;
+}
+
+#content {  
+	float: left;
+    display: table; 
+    height: 100%;
+} 
+
+ul#ratings li {
+    display:inline;
+}
+#intro {  
+    margin-top: 66px;  
+    padding: 44px;  
+    background: #f0f0f0;  
+}
+.oblique{
+	font-style: oblique;
+}
+#instructions{
+	font-family:"Lucida Console", Monaco, monospace;
+}
+
+/* side bar */
+div#sidebar {  
+    display: table-cell;  
+    width: 200px; 
+    padding-right: 12px;    
+    background:#000;
+} 
+#director-list ul li a {  
+        display: block;  
+        font-size: 14px;  
+        line-height: 44px;  
+        text-align: left;  
+        text-decoration: none;  
+        color: #777;  
+    }   
+#director-list ul li a:hover {  
+    color: #fff;  
+}
+
+#directed-list ul li a {  
+        display: block;  
+        font-size: 14px;  
+        line-height: 44px;  
+        text-align: left;  
+        text-decoration: none;  
+        color: #777;  
+    }   
+#directed-list ul li a:hover {  
+    color: #fff;  
+}   
+
+#sidebar ul li a {  
+        display: block;  
+        margin-right: 20px;  
+        width: 140px;  
+        font-size: 14px;  
+        line-height: 44px;  
+        text-align: left;  
+        text-decoration: none;  
+        color: #777;  
+    }   
+#sidebar ul li a:hover {  
+    color: #fff;  
+}  
+
+#sidebar ul li.selected a {  
+    color: #fff;  
+}
+
+/* buttons for adding objects */
+
+#addDirector:visited, #addMovie:link {
+    color:black;
+	font-weight: bold;
+    text-decoration: none;
+}
+#addMovieContainer {
+  float: left;
+  width: 200px;
+  text-align: center;
+  border: white solid;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+  background: white;
+}
+#addDirector:visited, #addDirector:link {
+    color:black;
+	font-weight: bold;
+    text-decoration: none;
+}
+#addDirectorContainer {
+  float: left;
+  width: 200px;
+  text-align: center;
+  border: white solid;
+  position: relative;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-bottom: 4em;
+  background: white;
+}
+
+/*main area*/
+ 
+#mainContent {  
+	display: table-cell;  
+	width: 620px;  
+	padding-left: 22px;
+}
+#newMovieForm {
+	display : none;
+	background : white;
+	position : relative;
+	width : 200px;
+	height : 450px;
+}
+#newDirectorForm {
+	display : none;
+	background : white;
+	position : relative;
+	width : 200px;
+	height : 410px;
+}
+.movieContainer {
+	width: 100px;
+	height: 200px;
+	padding: 10px;
+}
+
+#movie-list {
+	width: 700px;
+}
+
+#movie-list ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#movie-list li {
+    display: inline-block;
+    vertical-align: top;
+	
+}
+
+a {
+	color: #777;
+	text-decoration: none; 
+}
+div#movieContent {  
+    display: table-cell;   
+    padding-right: 12px;    
+    background:#000;
+} 
+
+#movieContent ul li a {  
+        display: inline-block;  
+        margin-right: 20px;
+        width: 140px;  
+        font-size: 14px;  
+        line-height: 44px;  
+        text-align: left;  
+        text-decoration: none;  
+        color: #777;
+		vertical-align: top;
+    }   
+
+
+#newMovieData form input, #movie_restricted_form input {
+    display:block;
+    margin-top: 0.3em;
+    margin-bottom: 0.6em;
+}
+form label {
+    font-weight: bold;
+    display:block;/*Necessary for the first letter*/
+}
+form label:first-letter{
+    text-transform: uppercase;
+}
+
+.section {  
+   padding-bottom: 22px; 
+ }
+
+.editable[readonly="readonly"]{
+	border-style: none;
+}
+.noEditable[readonly="readonly"]{
+	border-style: none;
+	background: #f0f0f0; 
+}
+
+#movie_id, #title {
+    font-size: 2.2em;
+    width: 15em;
+    font-weight: bold;
+}
+
+.commands{
+	float: left;
+    margin-right: 10em;
+}
+
+/*messages list*/
+.comment{
+	padding-bottom: 22px;
+}
+
+.messageTopic{
+	font-weight:bold;
+}
+
+
+
+
+
+
+

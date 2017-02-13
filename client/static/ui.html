@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="mdbst.css">
+	<title>MDBST</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="mdbst_client.js"></script>
+</head>
+
+<body> 
+	<div id="intro">
+		<h1>MDbST - Movie Database and Search Tool</h1>
+		<span id="instructions">Search for movies by title or click <span class="oblique">"ADD MOVIE"</span> to add a new movie to the database.</span>
+		<br>
+		<form action='javascript:handleSearchMovie()' id='searchForm'>
+			<input type="text" placeholder="Title" name="searchTitle">
+			<input type="button" value="Search" id='searchButton'>
+		</form>
+		
+		<div id="addMovieContainer">
+			<a href="#" id="addMovie">ADD MOVIE</a>
+			<div id="newMovieForm">
+			</div>
+		</div>
+		<div id="addDirectorContainer">
+			<a href="#" id="addDirector">ADD DIRECTOR</a>
+			<div id="newDirectorForm">
+			</div>
+		</div>
+	</div>
+	<div id= "content">
+		<div id="sidebar"> 
+			<!-- Side bar area 	-->	
+			<ul id="director_list">  
+
+			</ul>
+		</div>
+	 
+		<div id="movie-list"> 
+			<ul id="movie_list">  
+
+			</ul>
+		</div>
+
+	</div>	  
+</body>
+
+</html> 

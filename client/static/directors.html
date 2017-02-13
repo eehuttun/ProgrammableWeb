@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="mdbst.css">
+	<title>MDBST</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="mdbst_resources.js"></script>
+	
+</head>
+
+<body>
+	<script type="text/javascript">
+		$(function(){	
+			var id = getParameterByName('id');
+			var apiurl = "/mdbst/api/directors/"+id;
+			$( "#directed_list" ).on( "click", "li a", handleGetMovie );
+			$( "#editDirector" ).on( "click", handleEditDirectorForm );
+			$( "#deleteDirector" ).on( "click", handleDeleteDirector );
+			getDirector(apiurl);
+		})
+	</script>
+	<div id = "content">
+		<div class="section" id="directorInfo">
+
+			<p id="directorHeader"></p>
+			<p id="description"></p> 
+			
+			<br>
+			Movies directed:
+			<div id="directed-list"> 
+				<ul id="directed_list">  
+
+				</ul>
+			</div>
+			<form action="#" id="director_edit_form">	
+				<input id="editDirector" type="button" value="Edit director"/>
+			</form>
+			<div id="editDirectorForm">
+			</div>
+			<form action="#" id="director_delete_form">	
+				<input id="deleteDirector" type="button" value="Delete director"/>
+			</form>
+		</div>
+	</div>  
+</body>
+
+</html> 

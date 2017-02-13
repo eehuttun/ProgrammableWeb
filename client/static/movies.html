@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="mdbst.css">
+	<title>MDBST</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="mdbst_resources.js"></script>
+	
+</head>
+
+<body>
+	<script type="text/javascript">
+
+		$(function(){	
+			
+			var id = getParameterByName('id');
+			var apiurl = "/mdbst/api/movies/"+id;
+			$( "#director_list" ).on( "click", "li a", handleGetDirector );
+			$( "#editMovie" ).on( "click", handleEditMovieForm );
+			$( "#deleteMovie" ).on( "click", handleDeleteMovie );
+			$( "#submitRating" ).on( "click", handleSubmitRating );
+			$( "#addComment" ).on( "click", handleCreateComment );
+			getMovie(apiurl);
+			getComments(apiurl+"/comments/");
+			
+		})
+		
+	</script>
+	<div id = "content">
+		<div class="section" id="moviePublicInfo">
+				
+			<p id="movieHeader"></p>
+			<span id = "image"></span>
+			<p id="description"></p> 
+			<br>
+			Directors:
+			<div id="director-list"> 
+				<ul id="director_list">  
+
+				</ul>
+			</div>
+			<br>
+			<p id="rating">Rating: </p>
+			
+			<br>
+			<p>Rate this movie:</p>
+			<form action="#" id="rating_form">
+			<ul id="ratings">
+				<li><input type="radio" name="newRating" value=1>1</li>
+				<li><input type="radio" name="newRating" value=2>2</li>
+				<li><input type="radio" name="newRating" value=3>3</li>
+				<li><input type="radio" name="newRating" value=4>4</li>
+				<li><input type="radio" name="newRating" value=5>5</li>
+				<li><input type="radio" name="newRating" value=6>6</li>
+				<li><input type="radio" name="newRating" value=7>7</li>
+				<li><input type="radio" name="newRating" value=8>8</li>
+				<li><input type="radio" name="newRating" value=9>9</li>
+				<li><input type="radio" name="newRating" value=10>10</li>
+				</ul> 
+				<input id="submitRating" type="submit" value="Submit">
+			</form>
+			
+			<form action="#" id="movie_edit_form">	
+				<input id="editMovie" type="button" value="Edit movie"/>
+			</form>
+			<div id="editMovieForm">
+			</div>
+			<form action="#" id="movie_delete_form">	
+				<input id="deleteMovie" type="button" value="Delete movie"/>
+			</form>
+			
+			
+		</div>
+		<h2>Comment</h2>
+		
+		<form action="#" id="commentBox">
+		  Nickname:
+		  <br><input type="text" name="nickname">
+		  <br>
+		  Comment:
+		  <br>
+		  <input type="text" name="comment">
+		  <br>
+		  <input type="button" id="addComment" value="Submit">
+		</form>
+
+		<h3>All comments</h3>  
+			<ul id="comments_list">  
+
+			</ul>
+	</div>  
+</body>
+
+</html> 
